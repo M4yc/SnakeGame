@@ -1,4 +1,5 @@
 # Snake Game em Python
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ## Screenshots
 ![1](/Screenshots/Tela_inicial.png)
 ### *Home screen*
@@ -38,5 +39,6 @@ Contribuições são bem-vindas! Se você quiser melhorar este jogo da cobrinha,
 Este projeto está licenciado sob a Licença MIT.
 
 ## Autor
-- Maycon Araújo
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+-  *Maycosoft*
 
