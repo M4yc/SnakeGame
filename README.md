@@ -41,6 +41,5 @@ Contribuições são bem-vindas! Se você quiser melhorar este jogo da cobrinha,
 Este projeto está licenciado sob a Licença MIT.
 
 ## Autor
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 -  *Maycosoft*
 
