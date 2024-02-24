@@ -1,5 +1,5 @@
 # Snake Game em Python
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
 ## Screenshots
 ![1](/Screenshots/Tela_inicial.png)
 ### *Home screen*
@@ -18,6 +18,8 @@ Este é um jogo da cobrinha clássico implementado em Python usando a biblioteca
 - Fim de jogo quando a cobra colide com as bordas da tela ou com seu próprio corpo.
 
 ## Pré-requisitos
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
 Certifique-se de ter o Python e a biblioteca Pygame instalados em seu ambiente de desenvolvimento. Você pode instalar o Pygame usando o seguinte comando:
 
 ~~~
