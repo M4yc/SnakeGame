@@ -21,8 +21,12 @@ blue = (0, 0, 255)
 size_pixel = 10
 FPS = 15
 
+bg_inicial = pygame.image.load("Screenshots/Telainicial.png").convert()
+bg_game = pygame.image.load("Screenshots/Background.png").convert()
+icon_maca = pygame.image.load("Screenshots/icon-maca.png").convert()
+
 def telainicial():
-    intro =  True
+    intro = True
 
     while intro:
         for event in  pygame.event.get():
@@ -33,16 +37,12 @@ def telainicial():
                 if event.key == pygame.K_RETURN:
                     intro = False
         window.fill(black)
-
-        # Texto Centralizado
-        font = pygame.font.SysFont(None, 55)
-        text = font.render("Snake Game", True, white)
-        window.blit(text, (largura // 2 - text.get_width() // 2, altura // 4))
+        window.blit(bg_inicial, (0,0))
 
         #Botão
-        button_rect = pygame.draw.rect(window, green, (largura // 2 - 75, altura // 2, 150, 50))
+        button_rect = pygame.draw.rect(window, blue, (largura // 2 - 75, altura // 2, 150, 50))
         font = pygame.font.SysFont(None, 30)
-        text = font.render("Iniciar Jogo", True, black)
+        text = font.render("Iniciar Jogo", True, white)
         window.blit(text, (largura // 2 - text.get_width() // 2, altura // 2 + 15))
 
         pygame.display.update()
@@ -71,6 +71,7 @@ def screen_GameOver(score):
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (largura / 2, altura / 4)
     window.fill(black)
+    window.blit(bg_game, (0,0))
     window.blit(game_over_surface, game_over_rect)
     show_score(0, red, 'times', 20, score)
     pygame.display.flip()
@@ -85,12 +86,13 @@ def generate_apple():
     return apple_x, apple_y
 
 def design_apple(size_pixel, apple_x, apple_y):
+    #window.blit(icon_maca, (apple_x, apple_y))
     pygame.draw.rect(window, red, [apple_x, apple_y, size_pixel, size_pixel])
 
 
 def design_snake(size, pixels):
     for pixel in pixels:
-        pygame.draw.rect(window, green, [pixel[0], pixel[1], size, size])
+        pygame.draw.rect(window, white, [pixel[0], pixel[1], size, size])
 
 def design_score(score):
     font = pygame.font.SysFont("Helvetica", 25)
@@ -126,7 +128,7 @@ def play_game():
     apple_x, apple_y = generate_apple()
     while not gameOver:
         window.fill(black)
-
+        window.blit(bg_game, (0, 0))
         for evento in  pygame.event.get():
             if evento.type == pygame.QUIT:
                 gameOver = True
