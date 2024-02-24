@@ -21,9 +21,9 @@ blue = (0, 0, 255)
 size_pixel = 10
 FPS = 15
 
-bg_inicial = pygame.image.load("Screenshots/Telainicial.png").convert()
-bg_game = pygame.image.load("Screenshots/Background.png").convert()
-icon_maca = pygame.image.load("Screenshots/icon-maca.png").convert()
+bg_inicial = pygame.image.load("assets/Telainicial.png").convert()
+bg_game = pygame.image.load("assets/Background.png").convert()
+icon_maca = pygame.image.load("assets/icon-maca.png").convert()
 
 def telainicial():
     intro = True
