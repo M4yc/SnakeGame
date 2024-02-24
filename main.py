@@ -1,3 +1,5 @@
+import sys
+
 import pygame
 import random
 
@@ -18,6 +20,41 @@ blue = (0, 0, 255)
 # Parametro Snake
 size_pixel = 10
 FPS = 15
+
+def telainicial():
+    intro =  True
+
+    while intro:
+        for event in  pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    intro = False
+        window.fill(black)
+
+        # Texto Centralizado
+        font = pygame.font.SysFont(None, 55)
+        text = font.render("Snake Game", True, white)
+        window.blit(text, (largura // 2 - text.get_width() // 2, altura // 4))
+
+        #Botão
+        button_rect = pygame.draw.rect(window, green, (largura // 2 - 75, altura // 2, 150, 50))
+        font = pygame.font.SysFont(None, 30)
+        text = font.render("Iniciar Jogo", True, black)
+        window.blit(text, (largura // 2 - text.get_width() // 2, altura // 2 + 15))
+
+        pygame.display.update()
+        clock.tick(15)
+
+        # Verifique se o botão foi clicado
+        mouse_pos = pygame.mouse.get_pos()
+        if button_rect.collidepoint(mouse_pos):
+            for event in pygame.event.get():
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    intro = False
+
 
 def generate_apple():
     apple_x = round(random.randrange(0, largura - size_pixel) / float(size_pixel)) * float(size_pixel)
@@ -104,14 +141,5 @@ def play_game():
 
         clock.tick(FPS)
 
-# Criar um loop infinito
-
-# Desenhar os objetos do jogo na tela
-# Pontuação
-# Cobrinha
-# Comida
-
-# Criar a logiaca de GameOver
-# Cobra bateu na parede ou nela mesma
-
+telainicial()
 play_game()
