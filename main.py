@@ -1,5 +1,5 @@
 import sys
-
+import time
 import pygame
 import random
 
@@ -55,6 +55,28 @@ def telainicial():
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     intro = False
 
+def show_score(choice, color, font, size, score):
+    score_font = pygame.font.SysFont(font, size)
+    score_surface = score_font.render('Score : ' + str(score), True, color)
+    score_rect = score_surface.get_rect()
+    if choice == 1:
+        score_rect.midtop = (largura // 10, 15)
+    else:
+        score_rect.midtop = (largura // 2, altura // 1.25)
+    window.blit(score_surface, score_rect)
+def screen_GameOver(score):
+    # Adicione sua lógica para a tela de Game Over aqui
+    my_font = pygame.font.SysFont('times new roman', 90)
+    game_over_surface = my_font.render('YOU DIED', True, red)
+    game_over_rect = game_over_surface.get_rect()
+    game_over_rect.midtop = (largura / 2, altura / 4)
+    window.fill(black)
+    window.blit(game_over_surface, game_over_rect)
+    show_score(0, red, 'times', 20, score)
+    pygame.display.flip()
+    time.sleep(3)
+    pygame.quit()
+    sys.exit()
 
 def generate_apple():
     apple_x = round(random.randrange(0, largura - size_pixel) / float(size_pixel)) * float(size_pixel)
@@ -76,16 +98,16 @@ def design_score(score):
     window.blit(text, [5, 5])
 
 def select_speed(key):
-    if key == pygame.K_DOWN:
+    if key == pygame.K_DOWN or key == ord('s'):
         speed_x = 0
         speed_y = size_pixel
-    elif key == pygame.K_UP:
+    elif key == pygame.K_UP or key == ord('w'):
         speed_x = 0
         speed_y = -size_pixel
-    elif key == pygame.K_RIGHT:
+    elif key == pygame.K_RIGHT or key == ord('d'):
         speed_x = size_pixel
         speed_y = 0
-    elif key == pygame.K_LEFT:
+    elif key == pygame.K_LEFT or key == ord('a'):
         speed_x = -size_pixel
         speed_y = 0
 
@@ -115,6 +137,7 @@ def play_game():
         design_apple(size_pixel, apple_x, apple_y)
 
         if x < 0 or x >= largura or y < 0 or y >= altura:
+            screen_GameOver(size_snake - 1)
             gameOver = True
 
         x += velocidade_x
@@ -127,6 +150,7 @@ def play_game():
 
         for pixel in pixels[:-1]:
             if pixel == [x, y]:
+                screen_GameOver(size_snake - 1)
                 gameOver = True
 
         design_snake(size_pixel, pixels)
