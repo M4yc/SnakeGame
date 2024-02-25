@@ -1,5 +1,5 @@
 # Snake Game em Python
-
+![GIF_game](https://github.com/M4yc/SnakeGame/assets/62727540/68e4e3bf-fa12-4d2a-9238-1ab8af045494)
 ## Screenshots
 ![1](/Screenshots/Tela_inicial.png)
 ### *Home screen*
