@@ -19,7 +19,7 @@ blue = (0, 0, 255)
 
 # Parametro Snake
 size_pixel = 10
-FPS = 15
+FPS = 20
 
 bg_inicial = pygame.image.load("assets/Telainicial.png").convert()
 bg_game = pygame.image.load("assets/Background.png").convert()
