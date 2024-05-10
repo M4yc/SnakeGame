@@ -21,8 +21,8 @@ blue = (0, 0, 255)
 size_pixel = 10
 FPS = 20
 
-bg_inicial = pygame.image.load("assets/Telainicial.png").convert()
-bg_game = pygame.image.load("assets/Background.png").convert()
+bg_inicial = pygame.image.load("assets/Tela_inicial_2.png").convert()
+bg_game = pygame.image.load("assets/Background_2.png").convert()
 icon_maca = pygame.image.load("assets/icon-maca.png").convert()
 
 def telainicial():
@@ -92,7 +92,7 @@ def design_apple(size_pixel, apple_x, apple_y):
 
 def design_snake(size, pixels):
     for pixel in pixels:
-        pygame.draw.rect(window, white, [pixel[0], pixel[1], size, size])
+        pygame.draw.rect(window, green, [pixel[0], pixel[1], size, size])
 
 def design_score(score):
     font = pygame.font.SysFont("Helvetica", 25)
