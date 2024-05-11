@@ -21,8 +21,9 @@ blue = (0, 0, 255)
 size_pixel = 10
 FPS = 20
 
-bg_inicial = pygame.image.load("assets/Tela_inicial_2.png").convert()
-bg_game = pygame.image.load("assets/Background_2.png").convert()
+#imagens
+bg_inicial = pygame.image.load("assets/Tela_inicial.png").convert()
+bg_game = pygame.image.load("assets/Background.png").convert()
 icon_maca = pygame.image.load("assets/icon-maca.png").convert()
 gif_inicial = pygame.image.load("assets/Pygame.gif")
 
