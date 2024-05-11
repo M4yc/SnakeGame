@@ -39,21 +39,8 @@ def telainicial():
         window.fill(black)
         window.blit(bg_inicial, (0,0))
 
-        #Botão
-        button_rect = pygame.draw.rect(window, blue, (largura // 2 - 75, altura // 2, 150, 50))
-        font = pygame.font.SysFont(None, 30)
-        text = font.render("Iniciar Jogo", True, white)
-        window.blit(text, (largura // 2 - text.get_width() // 2, altura // 2 + 15))
-
         pygame.display.update()
         clock.tick(15)
-
-        # Verifique se o botão foi clicado
-        mouse_pos = pygame.mouse.get_pos()
-        if button_rect.collidepoint(mouse_pos):
-            for event in pygame.event.get():
-                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                    intro = False
 
 def show_score(choice, color, font, size, score):
     score_font = pygame.font.SysFont(font, size)
@@ -66,14 +53,14 @@ def show_score(choice, color, font, size, score):
     window.blit(score_surface, score_rect)
 def screen_GameOver(score):
     # Adicione sua lógica para a tela de Game Over aqui
-    my_font = pygame.font.SysFont('times new roman', 90)
+    my_font = pygame.font.SysFont('Pixelify Sans', 90)
     game_over_surface = my_font.render('YOU DIED', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (largura / 2, altura / 4)
     window.fill(black)
     window.blit(bg_game, (0,0))
     window.blit(game_over_surface, game_over_rect)
-    show_score(0, red, 'times', 20, score)
+    show_score(0, red, 'Pixelify Sans', 20, score)
     pygame.display.flip()
     time.sleep(3)
     pygame.quit()
@@ -95,7 +82,7 @@ def design_snake(size, pixels):
         pygame.draw.rect(window, green, [pixel[0], pixel[1], size, size])
 
 def design_score(score):
-    font = pygame.font.SysFont("Helvetica", 25)
+    font = pygame.font.SysFont("Pixelify Sans", 25)
     text = font.render(f"Score: {score}", True, white)
     window.blit(text, [5, 5])
 
