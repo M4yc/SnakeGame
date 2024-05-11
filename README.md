@@ -5,7 +5,7 @@
 ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-![GIF_game](https://github.com/M4yc/SnakeGame/assets/62727540/68e4e3bf-fa12-4d2a-9238-1ab8af045494)
+![GIF_game](/Screenshots/Gameplay.gif)
 ## Screenshots
 ![1](/Screenshots/PyGame.gif)
 ### *Home screen*
@@ -46,9 +46,15 @@ python main.py
 ## 📫 Contribuições
 Contribuições são bem-vindas! Se você quiser melhorar este jogo da cobrinha, sinta-se à vontade para enviar um pull request.
 
+## 🤝 Autor
+
+<img loading="lazy" src="https://avatars.githubusercontent.com/u/62727540?v=4" width=115 style="border-radius: 50%;">
+
+- Maycon Vinicius B. Araújo - ``M4ycosoft``
+  
+<a href="https://www.linkedin.com/in/mayconaraujo-tech/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://instagram.com/mayconaraujo.tech" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+<a href = "mailto:mayconvbatista84@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+
 ## 🧾 Licença
 Este projeto está licenciado sob a Licença MIT.
-
-## 🤝 Autor
--  *Maycosoft*
-
