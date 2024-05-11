@@ -25,7 +25,7 @@ FPS = 20
 bg_inicial = pygame.image.load("assets/Tela_inicial.png").convert()
 bg_game = pygame.image.load("assets/Background.png").convert()
 icon_maca = pygame.image.load("assets/icon-maca.png").convert()
-gif_inicial = pygame.image.load("assets/Pygame.gif")
+
 
 def telainicial():
     intro = True
@@ -39,7 +39,7 @@ def telainicial():
                 if event.key == pygame.K_RETURN:
                     intro = False
         window.fill(black)
-        window.blit(gif_inicial, (0,0))
+        window.blit(bg_inicial, (0,0))
 
         pygame.display.update()
         clock.tick(15)
