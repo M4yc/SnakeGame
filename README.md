@@ -10,9 +10,6 @@
 ![1](/Screenshots/PyGame.gif)
 ### *Home screen*
 
-![2](/Screenshots/Tela_game.png)
-### *Screen Game*
-
 ## 📕 Descrição
 
 Este é um jogo da cobrinha clássico implementado em Python usando a biblioteca Pygame. O jogo é uma versão simples e divertida do clássico Snake, onde o jogador controla uma cobra que deve comer maçãs para crescer, evitando colidir com as bordas da tela e com seu próprio corpo.
